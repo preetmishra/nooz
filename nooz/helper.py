@@ -1,3 +1,4 @@
+import urwid
 from typing import Optional
 
 
@@ -76,3 +77,32 @@ def fix_null(response: Optional[str]) -> str:
     '''
 
     return response if response else ''
+
+
+# FIXME: Add missing type annotations.
+def draw_box(widget, where: str, title: str = '', title_align: str = 'center',
+             title_attr=None):
+    '''
+    Wrapper function for urwid.LineBox() to reduce the number of parameters
+    needed for each function call.
+    '''
+    if where == 'everywhere':
+        return urwid.LineBox(widget, title, title_align, title_attr,
+                             tlcorner='┌', tline='─', lline='│', trcorner='┐',
+                             blcorner='└', rline='│', bline='─', brcorner='┘')
+    elif where == 'top':
+        return urwid.LineBox(widget, title, title_align, title_attr,
+                             tlcorner='─', tline='─', lline='', trcorner='─',
+                             blcorner='', rline='', bline='', brcorner='')
+    elif where == 'bottom':
+        return urwid.LineBox(widget, title, title_align, title_attr,
+                             tlcorner='', tline='', lline='', trcorner='',
+                             blcorner='─', rline='', bline='─', brcorner='─')
+    elif where == 'left':
+        return urwid.LineBox(widget, title, title_align, title_attr,
+                             tlcorner='', tline='', lline='│', trcorner='',
+                             blcorner='', rline='', bline='', brcorner='')
+    elif where == 'right':
+        return urwid.LineBox(widget, title, title_align, title_attr,
+                             tlcorner='', tline='', lline='', trcorner='',
+                             blcorner='', rline='│', bline='', brcorner='')
