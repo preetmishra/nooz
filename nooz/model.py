@@ -32,7 +32,7 @@ def fetch_news(keyword: str = '', category: str = '',
     }
     '''
 
-    API_KEY = ''
+    API_KEY = '098b7f702dcd4e9cadfe30f7f1400331'
     TOP_HEADLINES_URL = 'http://newsapi.org/v2/top-headlines'
 
     params: Dict[str, Union[int, str]] = {
