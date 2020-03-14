@@ -1,6 +1,6 @@
 import urwid
 
-from views import MainView
+from nooz.views import MainView
 
 
 class App:

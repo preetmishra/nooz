@@ -1,8 +1,8 @@
 from typing import Dict
 import urwid
 
-from helper import draw_box
-from model import fetch_news
+from nooz.helper import draw_box
+from nooz.model import fetch_news
 
 
 # FIXME: Add missing type annotations.

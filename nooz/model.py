@@ -1,7 +1,7 @@
 import requests
 from typing import Dict, List, Union
 
-from helper import fix_null
+from nooz.helper import fix_null
 
 
 def fetch_news(keyword: str = '', category: str = '',

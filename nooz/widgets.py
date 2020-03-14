@@ -1,7 +1,7 @@
 from typing import Any
 import urwid
 
-from helper import CATEGORIES, COUNTRIES
+from nooz.helper import CATEGORIES, COUNTRIES
 
 
 class AboutTextWidget(urwid.WidgetWrap):

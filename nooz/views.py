@@ -1,8 +1,8 @@
 import urwid
 
-from boxes import NewsBoxes
-from helper import CATEGORIES, COUNTRIES, draw_box
-from widgets import AboutTextWidget, CategorySearchWidget, KeywordSearchWidget
+from nooz.boxes import NewsBoxes
+from nooz.helper import CATEGORIES, COUNTRIES, draw_box
+from nooz.widgets import AboutTextWidget, CategorySearchWidget, KeywordSearchWidget
 
 
 # FIXME: Add missing type annotations.
